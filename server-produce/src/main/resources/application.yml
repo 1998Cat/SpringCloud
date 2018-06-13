@@ -1,0 +1,10 @@
+server:
+  port: 8891
+spring:
+  application:
+    name: server-product
+eureka:
+  client:
+    service-url:
+    #defaultZone写的注册中心的地址，与注册 中心配置文件中的url一致
+     defaultZone: http://server8888:8888/eureka/,http://server8887:8887/eureka/

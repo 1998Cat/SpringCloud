@@ -1,0 +1,14 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: server-consume-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://server8888:8888/eureka/,http://server8887:8887/eureka/
+zuul:
+  routes:
+    hello-server:
+      path: /api-hello/**
+      serviceId: server-product
